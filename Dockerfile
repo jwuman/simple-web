@@ -8,4 +8,4 @@ COPY www/index.html /var/www/
 
 EXPOSE 9000
 
-CMD /sbin/nginx -g "daemon off;"
+CMD /usr/sbin/nginx -g "daemon off;"
