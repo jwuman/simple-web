@@ -1,9 +1,8 @@
-FROM alpine:latest
+FROM nginx:alpine
 MAINTAINER wuman
 
-RUN apk add --no-cache nginx && mkdir /run/nginx
 RUN sed -i.bak 's/80/9000/' /etc/nginx/conf.d/default.conf 
-COPY www/index.html /var/www/
+COPY www/index.html /usr/share/nginx/html
 
 EXPOSE 9000
 
